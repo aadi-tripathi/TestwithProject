@@ -1,22 +1,22 @@
+version: "1.0"
 info:
   model: int-scaffold
 packages:
-- gitBranch: main
+- name: TestwithProject
   gitServerName: aaadiAc
   gitUrl: https://github.com/aadi-tripathi
   gitUsername: aadi-tripathi
-  name: TestwithProject
+  gitBranch: main
 services:
-- packages:
+- serviceName: project.testwith.integrations:daf
+  packages:
   - name: TestwithProject
     version: 2.0.0
-  serviceName: project.testwith.integrations:daf
-- packages:
+- serviceName: pub.date:getCurrentDate
+  packages:
   - name: WmPublic
     version: 12.1.0.0.1319
-  serviceName: pub.date:getCurrentDate
-- packages:
+- serviceName: project.testwith.streaming.connections:EmbeddedMessaging
+  packages:
   - name: TestwithProject
     version: 2.0.0
-  serviceName: project.testwith.streaming.connections:EmbeddedMessaging
-version: '1.0'
